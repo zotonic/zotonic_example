@@ -1,0 +1,40 @@
+.list-item {
+    margin-top: 1.4rem;
+
+    p {
+        max-width: 55%;
+
+        @media screen and (max-width: $screen-width-breakpoint) {
+           max-width: 90%;
+        }
+
+        margin-inline-start: 5%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 0;
+    }
+
+    p.title {
+        margin-inline-start: 0;
+        font-size: 1.5rem;
+    }
+
+    figure {
+        padding-left: 5%;
+    }
+}
+
+.connections {
+    dt {
+        font-size: 1.8rem;
+    }
+}
+
+.clickable:hover {
+    p.title {
+        a {
+            color: $zotonic-blue;
+        }
+    }
+}

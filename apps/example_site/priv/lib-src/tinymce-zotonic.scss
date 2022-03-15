@@ -1,0 +1,92 @@
+/* This file contains the CSS data for the editable area (iframe) of tinyMCE */
+/* Override this in your project to change styles in the tinymce editor      */
+
+@import "settings";
+
+@import "./tufte/fonts";
+@import "./tufte/tufte.scss";
+@import "./tufte/syntax-highlighting.scss";
+@import "./site/rst.scss";
+
+h4, h5, h6 {
+    text-decoration: line-through;
+    color: #666;
+}
+
+html {
+    padding: 10px;
+}
+
+img {
+    display: block;
+    max-width: 90vw;
+    width: 53vw;
+    margin-bottom: 3em;
+
+    &.z-tinymce-media {
+        position: relative;
+        border: 1px solid #667;
+        height: auto;
+        cursor: pointer;
+        width: 270px;
+
+        &.z-active:hover {
+           border: 1px solid #039ed4;
+        }
+
+    }
+    &.z-tinymce-media-align-block {
+        // Not supported in this site
+    }
+    &.z-tinymce-media-align-right {
+        // Not supported in this site
+    }
+    &.z-tinymce-media-align-left {
+        // Not supported in this site
+    }
+    &.z-tinymce-media-size-large {
+        margin-top: 1.4rem;
+        clear: both;
+        width: 90vw;
+    }
+    &.z-tinymce-media-size-middle {
+        width: 53vw;
+    }
+    &.z-tinymce-media-size-small {
+        float: right;
+        clear: right;
+        margin-right: -60%;
+        width: 50%;
+        margin-top: 0;
+        margin-bottom: 1.96rem;
+        vertical-align: baseline;
+    }
+
+    @media screen and (max-width: $screen-width-breakpoint) {
+        &.z-tinymce-media-size-large {
+            clear: both;
+            width: 90vw;
+        }
+        &.z-tinymce-media-size-middle {
+            clear: both;
+            width: 90vw;
+        }
+    }
+}
+
+aside {
+    position: relative;
+    border: 1px dashed #666;
+    padding: 10px;
+
+    &::before {
+        content:  "aside";
+        font-size: 10px;
+        padding: 2px 4px;
+        color: white;
+        background-color: #666;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}

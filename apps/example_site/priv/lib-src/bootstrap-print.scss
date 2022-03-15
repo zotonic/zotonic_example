@@ -1,0 +1,76 @@
+/* Zotonic admin scss main file, setting our preferences. */
+
+/* -------begin customization-------- */
+
+@import "settings";
+
+/* -------end customization-------- */
+
+// @import "site/grid_print";
+@import "site/grid";
+
+@import "site/type";
+@import "site/nav";
+@import "site/rst";
+@import "site/list";
+@import "site/form";
+@import "site/home";
+@import "site/misc";
+@import "tufte/tufte";
+
+@import "tufte/print";
+
+/* finally, import Bootstrap to set the changes! */
+
+@import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/print";
+@import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/glyphicons";
+
+// Core CSS
+@import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/scaffolding";
+@import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/type";
+@import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/code";
+@import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/grid";
+@import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/tables";
+@import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/forms";
+@import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/buttons";
+
+// // Components
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/component-animations";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/dropdowns";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/button-groups";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/input-groups";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/navs";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/navbar";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/breadcrumbs";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/pagination";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/pager";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/labels";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/badges";
+// // @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/jumbotron";
+@import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/thumbnails";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/alerts";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/progress-bars";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/media";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/list-group";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/panels";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/responsive-embed";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/wells";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/close";
+
+// // Components w/ JavaScript
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/modals";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/tooltip";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/popovers";
+// @import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/carousel";
+
+// Utility classes
+@import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/utilities";
+@import "bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/responsive-utilities";
+
+
+/* -------begin customization-------- */
+/* create new custom classes from existing classes */
+
+
+/* -------end customization-------- */
+

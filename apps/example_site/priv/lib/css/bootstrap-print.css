@@ -1,0 +1,82 @@
+/*
+Error: Undefined variable: "$sans-font".
+        on line 24 of tufte/print.scss
+        from line 144 of bootstrap-print.scss
+
+19: $body-bg-light:      #D6C8D0;
+20: 
+21: $body-bg:            #ffffff;
+22: 
+23: 
+24: $body-bg-text:       #f7dbeb;
+25: 
+26: $content-bg:         #faf1f6;
+27: $content-bg-middle:  $content-bg;
+28: $content-bg-dark:    #af9fa9; // #e5dde2; // #d3c3cc;
+29: $content-bg-light:   #faf1f6; // #e5dde2;
+
+Backtrace:
+tufte/print.scss:24
+bootstrap-print.scss:144
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/stack.rb:79:in `block in with_base'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/stack.rb:115:in `with_frame'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/stack.rb:79:in `with_base'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:430:in `map'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/stack.rb:79:in `block in with_base'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/stack.rb:115:in `with_frame'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/stack.rb:79:in `with_base'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:325:in `map'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/stack.rb:88:in `block in with_import'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/stack.rb:115:in `with_frame'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/stack.rb:88:in `with_import'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/stack.rb:79:in `block in with_base'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/stack.rb:115:in `with_frame'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/stack.rb:79:in `with_base'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/exec/sass_scss.rb:407:in `run'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/exec/base.rb:52:in `parse'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/lib/sass/exec/base.rb:19:in `parse!'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/gems/sass-3.4.14/bin/sass:13:in `<top (required)>'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/bin/sass:19:in `load'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/bin/sass:19:in `<main>'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/bin/ruby_noexec_wrapper:14:in `eval'
+/Users/marc/.rvm/gems/ruby-1.9.3-p429/bin/ruby_noexec_wrapper:14:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$sans-font\".\A         on line 24 of tufte/print.scss\A         from line 144 of bootstrap-print.scss\A \A 19: $body-bg-light:      #D6C8D0;\A 20: \A 21: $body-bg:            #ffffff;\A 22: \A 23: \A 24: $body-bg-text:       #f7dbeb;\A 25: \A 26: $content-bg:         #faf1f6;\A 27: $content-bg-middle:  $content-bg;\A 28: $content-bg-dark:    #af9fa9; // #e5dde2; // #d3c3cc;\A 29: $content-bg-light:   #faf1f6; // #e5dde2;"; }

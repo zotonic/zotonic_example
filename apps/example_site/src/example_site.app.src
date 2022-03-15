@@ -1,0 +1,10 @@
+{application, example_site, [
+    {description, "Example Zotonic Site"},
+    {vsn, "git"},
+    {registered, []},
+    {applications, [kernel, stdlib, zotonic_core]},
+    {env, []},
+    {modules, []},
+    {maintainers, []},
+    {licenses, ["Apache-2.0"]}
+]}.

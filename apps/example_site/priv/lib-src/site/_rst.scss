@@ -1,0 +1,119 @@
+main,
+.mce-content-body {
+    aside,
+    .edit-github {
+        float: right;
+        clear: right;
+        margin-top: 0;
+        margin-bottom: 1.96rem;
+        margin-right: 12%;              // 55+(60%*55) = 88
+        width: 27.5%;                   // 50% of 55%
+        font-size: 1.0rem;
+        line-height: 1.96; //changed to bring line heights into rational pattern
+        vertical-align: baseline;
+        position: relative;
+
+        p, pre {
+            width: 100%;
+        }
+
+        .first {
+            margin-top: 0;
+        }
+        .first ~ p {
+            margin-top: 0;
+        }
+
+        @media screen and (max-width: $screen-width-breakpoint) {
+            float: none;
+            margin-top: 1.4rem;
+            margin-left: 5%;
+            width: 90%;
+        }
+    }
+
+    .edit-github {
+        margin-top: 1.4rem;
+    }
+
+    li aside {
+        margin-right: -80%;
+    }
+
+    .admonition-title {
+        color: $contrast-color;
+    }
+
+    .toctree-wrapper {
+        display: none;
+    }
+
+    .page-developerguide {
+        .toctree-wrapper {
+            display: block;
+        }
+    }
+
+    .literal-block-wrapper {
+        margin-top: 1.4rem;
+    }
+
+    table {
+        margin-top: 1.4rem;
+    }
+
+    dt,
+    dd {
+        font-size: 1.4rem;
+    }
+
+    dt {
+        color: $contrast-color;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    dd {
+        margin-bottom: 1rem;
+        max-width: 55%;
+        line-height: 2rem;
+        padding-left: 2rem;
+
+        @media screen and (max-width: $screen-width-breakpoint) {
+           max-width: 90%;
+        }
+
+        p {
+            margin: 0;
+            width: 100%;
+        }
+
+        a {
+          color: $text-color;
+          text-decoration: none;
+          background: -webkit-linear-gradient($bg-color, $bg-color), -webkit-linear-gradient($bg-color, $bg-color), -webkit-linear-gradient(currentColor, currentColor);
+          background: linear-gradient($bg-color, $bg-color), linear-gradient($bg-color, $bg-color), linear-gradient(currentColor, currentColor);
+          -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+          -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+          background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+          background-repeat: no-repeat, no-repeat, repeat-x;
+          text-shadow: 0.03em 0 $bg-color, -0.03em 0 $bg-color, 0 0.03em $bg-color, 0 -0.03em $bg-color, 0.06em 0 $bg-color, -0.06em 0 $bg-color, 0.09em 0 $bg-color, -0.09em 0 $bg-color, 0.12em 0 $bg-color, -0.12em 0 $bg-color, 0.15em 0 $bg-color, -0.15em 0 $bg-color;
+          background-position: 0% 93%, 100% 93%, 0% 93%; 
+        }
+    }
+
+    td,
+    th {
+        p, pre {
+            width: 100%;
+        }
+    }
+
+    dd, ol, ul {
+        dd, ol, ul {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}

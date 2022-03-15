@@ -17,6 +17,12 @@ Make sure that you have installed the dependencies:
  * C compiler (gcc)
  * Build tools (GNU Make, reltool etc.)
 
+For development:
+
+  * inotify (or fswatch)
+  * sassc or sass to handle .scss / .sass files
+  * gettext to process .pot / .po files
+
 If you want to use video
 
  * ffmpeg
@@ -43,7 +49,21 @@ the hostname `example.test`. The hostname is configured in
 You will need to add the hostname to your `/etc/hosts` file, add
 this line:
 
-    example.test  127.0.0.1
+    127.0.0.1  example.test
+
+## Configure PostgreSQL
+
+Add the user role `zotonic` with all permissions on the database `zotonic`.
+The user should be able to login using the password `zotonic` from
+localhost:
+
+    $ sudo -u postgres psql (enter your OS password)
+
+And then:
+
+    postgres=# CREATE USER zotonic WITH PASSWORD 'zotonic';
+    postgres=# CREATE DATABASE zotonic WITH OWNER = zotonic ENCODING = 'UTF8';
+    postgres=# GRANT ALL ON DATABASE zotonic TO zotonic;
 
 ## Start Zotonic
 

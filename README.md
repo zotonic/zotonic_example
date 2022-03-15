@@ -77,14 +77,14 @@ Zotonic will start and you will see the Erlang command prompt.
 
 You can stop Zotonic by typing twice ctrl-C.
 
-You can now visit the site: https://example.text:8443/
+You can now visit the site: https://example.test:8443/
 
 Be sure to accept the self-signed certificate.
 Chrome users: click in the white and type: `thisisunsafe`
 
 ## Admin interface
 
-The admin interface is at: https://example.text:8443/admin/
+The admin interface is at: https://example.test:8443/admin/
 
 The username is `admin` and the password is also `admin`.
 (Note that the `admin` password can only be used from a local network address.)

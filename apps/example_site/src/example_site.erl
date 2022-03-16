@@ -135,7 +135,9 @@ manage_schema(_Version, _Context) ->
         ],
 
         % Resources with media files attached. The media files are provided in the
-        % priv/schema_data folder.
+        % priv/schema_data folder. Note that 'media' are just resources like the one
+        % above, only difference is that here we want to upload a file to be added to
+        % the resource. All resources can have one file or embed code.
         media = [
             {page_image_1, "de-braak.jpg", #{
                 <<"title">> => <<"De Braak">>,

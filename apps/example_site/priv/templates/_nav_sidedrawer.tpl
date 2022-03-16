@@ -55,5 +55,9 @@
         <li>
             <a href="{% url logoff %}"><span class="fa fa-sign-out"></span> {_ Log off _}</a>
         </li>
+    {% else %}
+        <li>
+            <a href="{% url admin %}"><span class="fa fa-sign-in"></span> {_ Admin _}</a>
+        </li>
     {% endif %}
 </ul>

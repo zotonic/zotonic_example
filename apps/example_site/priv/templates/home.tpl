@@ -78,16 +78,15 @@
             {# Note the {_ .. _} tags. They surround translatable texts. A .pot file   #}
             {# with all texts is created in priv/translations/template/ via the button #}
             {# on the /admin/translation page.                                         #}
-            <h2>{_ Recent articles, cookbooks, release notes and video. _}</h2>
+            <h2>{_ Recent updates. _}</h2>
 
-            {# Search for the latest 20 articles, video, documents, release notes and  #}
-            {# cook book entries.                                                      #}
+            {# Search for the latest 20 articles, video, and documents.                #}
             {# The 'cat' is an argumment for the 'query' search, which is implemeted   #}
             {# by module `mod_search`.                                                 #}
             {# The 'is_featured' is set for featured items, the "-is_featured" will    #}
             {# sort 'true' values first.                                               #}
             {% for id in m.search.query::%{
-                    cat: [ "article", "video", "document", "releasenotes", "cookbook" ],
+                    cat: [ "article", "video", "document" ],
                     is_published: true,
                     sort: [ "-is_featured", "-created" ],
                     pagelen: 20,

@@ -99,18 +99,22 @@ manage_schema(_Version, _Context) ->
             % Names for generic pages (about, search etc) are encouraged
             % to start with "page_" to prevent name clashes with categories
             % and predicates (which don't have a prefix for their name).
-            {page_home, other, [
-                {title, <<"Zotonic">>},
-                {body, <<
-                    "<p>The <a href='#cms'>content management system</a> that combines ",
-                    "a <a href='#data-model'>flexible data model</a> with ",
-                    "<a href='#templates'>powerful templates</a>, and "
-                    "<a href='#mqtt'>real time communication</a>.</p>",
-                    "<p>Build <a href='#examples'>any website</a>, quick.</p>"
-                >>},
-                {page_path, <<"/">>}
-            ]}
+            {page_home, other, #{
+                <<"title">> => <<"Home">>,
+                <<"summary">> => <<"Short blurb for on the home page.">>,
+                <<"body">> => <<
+                    "<p>This is a story for on the home page.</p>"
+                >>,
+                <<"page_path">> => <<"/">>
+            }},
 
+            {page_article_1, article, #{
+                <<"title">> => <<"An article (nr 1)">>,
+                <<"summary">> => <<"The summary for the article.">>,
+                <<"body">> => <<
+                    "<p>The body text of the article, can be very long.</p>"
+                >>
+            }}
         ],
 
         % Predicates are the 'labels' on the edges (aka connections)
@@ -142,6 +146,8 @@ manage_schema(_Version, _Context) ->
         edges = [
 
             % {from_resource, predicate_name, to_resource}
+
+            {page_home, haspart, page_article_1}
         ]
     }.
 

@@ -39,7 +39,9 @@
 % added in the manage_schema/2 function.
 % 'acl' is provided by the mod_acl_user_groups and other modules
 % that implement access control.
--mod_depends([ acl ]).
+% 'mod_oembed' is used to fetch embed code for a video in manage_schema.
+% 'mod_menu' is installs the main_menu, which is updated in manage_data.
+-mod_depends([ acl, mod_oembed, mod_menu ]).
 
 % Exports - if exports change then the module is restarted after
 % compilation.
@@ -99,7 +101,7 @@ manage_schema(_Version, _Context) ->
             % Names for generic pages (about, search etc) are encouraged
             % to start with "page_" to prevent name clashes with categories
             % and predicates (which don't have a prefix for their name).
-            {page_home, other, #{
+            {page_home, collection, #{
                 <<"title">> => <<"Home">>,
                 <<"summary">> => <<"Short blurb for on the home page.">>,
                 <<"body">> => <<
@@ -108,12 +110,38 @@ manage_schema(_Version, _Context) ->
                 <<"page_path">> => <<"/">>
             }},
 
+            % This is an example article. Note that it is initialized using
+            % a multilingual title. This is done using a "trans" record which
+            % contains a list of language versions. The language code is the
+            % two letter ISO 639-1 code.
             {page_article_1, article, #{
-                <<"title">> => <<"An article (nr 1)">>,
+                <<"title">> => #trans{
+                    tr = [
+                        {en, <<"An article (nr 1)">>}
+                    ]},
                 <<"summary">> => <<"The summary for the article.">>,
                 <<"body">> => <<
                     "<p>The body text of the article, can be very long.</p>"
                 >>
+            }},
+
+            % Example video, using OEmbed. The module mod_oembed picks up the "oembed_url"
+            % and will fetch proper embed code from (in this case) Youtube.
+            {page_video_1, video, #{
+                <<"title">> => <<"Zotonic: The Movie">>,
+                <<"summary">> => <<"Example of a totally random video embedded via oembed.">>,
+                <<"oembed_url">> => <<"https://www.youtube.com/watch?v=r9cmWJvXIj4">>
+            }}
+        ],
+
+        % Resources with media files attached. The media files are provided in the
+        % priv/schema_data folder.
+        media = [
+            {page_image_1, "de-braak.jpg", #{
+                <<"title">> => <<"De Braak">>,
+                <<"address_city">> => <<"Amstelveen">>,
+                <<"address_country">> => <<"nl">>,
+                <<"summary">> => <<"Autumn view of park “De Braak” in Amstelveen.">>
             }}
         ],
 
@@ -147,12 +175,34 @@ manage_schema(_Version, _Context) ->
 
             % {from_resource, predicate_name, to_resource}
 
-            {page_home, haspart, page_article_1}
+            % The 'haspart' predicate is used to create collections of
+            % resources. Usually the subject is a collection.
+            {page_home, haspart, page_article_1},
+            {page_home, haspart, page_video_1},
+
+            % The predicate 'depiction' is used for images of articles,
+            % people etc.
+            {page_article_1, depiction, page_image_1}
         ]
     }.
 
 
 %% This function runs after the schema is installed or updated.
 -spec manage_data( z_module_manager:manage_schema(), z:context() ) -> ok.
-manage_data(_Version, _Context) ->
-    ok.
+manage_data(_Version, Context) ->
+    % Ensure that the menu in the main_menu contains at least one page.
+    % The main_menu is installed by mod_menu, but is initially empty.
+    case m_rsc:p(main_menu, menu, Context) of
+        None when None =:= undefined;
+                  None =:= [] ->
+            Menu = [
+                #rsc_tree{
+                    id = page_article_1,
+                    tree = []
+                }
+            ],
+            {ok, _} = m_rsc:update(main_menu, #{ <<"menu">> => Menu }, Context),
+            ok;
+        _ ->
+            ok
+    end.

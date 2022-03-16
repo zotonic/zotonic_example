@@ -40,14 +40,15 @@
         {% endwith %}
     {% endwith %}
 
+    <li class="divider"></li>
+
     {% if m.acl.user %}
-        <li class="divider"></li>
         {% if id.is_editable %}
             <li>
                 <a href="{% url admin_edit_rsc id=id %}"><span class="fa fa-pencil"></span> {_ Edit page _}</a>
             </li>
         {% endif %}
-        {% if m.rsc.main_menu.id_editable %}
+        {% if m.rsc.main_menu.is_editable %}
             <li>
                 <a href="{% url admin_edit_rsc id=`main_menu` %}"><span class="fa fa-pencil"></span> {_ Edit menu _}</a>
             </li>

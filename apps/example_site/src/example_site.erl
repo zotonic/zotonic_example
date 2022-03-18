@@ -40,8 +40,14 @@
 % 'acl' is provided by the mod_acl_user_groups and other modules
 % that implement access control.
 % 'mod_oembed' is used to fetch embed code for a video in manage_schema.
+% 'mod_video_embed' is used to fetch embed code for a video in manage_schema.
 % 'mod_menu' is installs the main_menu, which is updated in manage_data.
--mod_depends([ acl, mod_oembed, mod_menu ]).
+-mod_depends([
+    acl,
+    mod_oembed,
+    mod_video_embed,
+    mod_menu
+]).
 
 % Exports - if exports change then the module is restarted after
 % compilation.

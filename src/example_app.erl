@@ -1,8 +1,9 @@
 %% @author Marc Worrell <marc@worrell.nl>
 %% @copyright 2022 Marc Worrell
-%% @doc Zotonic Example umbrella application (empty, see zotonic_launcher)
+%% @doc Zotonic Example umbrella application.
+%% LOOKING FOR THE SITE CODE? See apps/example_site
 
-%% Copyright 2017 Marc Worrell
+%% Copyright 2022 Marc Worrell
 %%
 %% Licensed under the Apache License, Version 2.0 (the "License");
 %% you may not use this file except in compliance with the License.

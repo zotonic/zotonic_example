@@ -127,6 +127,7 @@ manage_schema(_Version, _Context) ->
 
             % Example video, using OEmbed. The module mod_oembed picks up the "oembed_url"
             % and will fetch proper embed code from (in this case) Youtube.
+            % NOTA BENE: Check the 'media' data for a better way to import a medium item from an URL.
             {page_video_1, video, #{
                 <<"title">> => <<"Zotonic: The Movie">>,
                 <<"summary">> => <<"Example of a totally random video embedded via oembed.">>,
@@ -144,6 +145,15 @@ manage_schema(_Version, _Context) ->
                 <<"address_city">> => <<"Amstelveen">>,
                 <<"address_country">> => <<"nl">>,
                 <<"summary">> => <<"Autumn view of park “De Braak” in Amstelveen.">>
+            }},
+
+            {page_video_2, "https://www.youtube.com/watch?v=Q9kgN9m_N2k", #{
+                <<"title">> => <<"Making: Zotonic - The Movie">>,
+                <<"body">> => <<
+                    "<p>This is the \"Making of\" of Zotonic - the Movie.</p>",
+                    "<p>Zotonic is the Erlang Web framework and content management system. ",
+                    "More info on <a href=\"http://www.zotonic.com\">zotonic.com</a></p>"
+                    >>
             }}
         ],
 

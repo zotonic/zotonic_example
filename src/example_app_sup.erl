@@ -1,6 +1,7 @@
 %% @author Marc Worrell <marc@worrell.nl>
 %% @copyright 2022 Marc Worrell
 %% @doc Zotonic Example App umbrella supervisor (empty)
+%% LOOKING FOR THE SITE CODE? See apps/example_site
 
 %% Copyright 2022 Marc Worrell
 %%

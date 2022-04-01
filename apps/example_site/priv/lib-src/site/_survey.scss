@@ -1,0 +1,18 @@
+form.form-survey {
+    font-size: 1.4rem;
+
+    .radio input[type="radio"],
+    .radio-inline input[type="radio"],
+    .checkbox input[type="checkbox"],
+    .checkbox-inline input[type="checkbox"] {
+        position: relative;
+        margin-left: 0;
+        transform: scale(2);
+        margin-right: 0.7rem;
+        margin-top: 1.4rem;
+    }
+
+    .form-group {
+        margin-bottom: 2rem;
+    }
+}

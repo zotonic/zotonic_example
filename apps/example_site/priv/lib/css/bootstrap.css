@@ -815,6 +815,20 @@ input.form-control {
       .page-page_home .home__featured .home__featured__item:hover img {
         opacity: 1; }
 
+form.form-survey {
+  font-size: 1.4rem; }
+  form.form-survey .radio input[type="radio"],
+  form.form-survey .radio-inline input[type="radio"],
+  form.form-survey .checkbox input[type="checkbox"],
+  form.form-survey .checkbox-inline input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+    transform: scale(2);
+    margin-right: 0.7rem;
+    margin-top: 1.4rem; }
+  form.form-survey .form-group {
+    margin-bottom: 2rem; }
+
 .clickable {
   cursor: pointer; }
 

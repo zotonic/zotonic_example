@@ -1,6 +1,7 @@
 
 {% lib
     "js/apps/jquery-latest.min.js"
+    "js/apps/jquery-ui-latest.min.js"
     "js/modules/jquery.ui.touch-punch.min.js"
 %}
 
@@ -12,6 +13,7 @@
     "js/modules/z.notice.js"
     "js/modules/z.dialog.js"
     "js/modules/z.clickable.js"
+    "js/modules/z.survey_test_feedback.js"
     "js/modules/livevalidation-1.3.js"
     "js/modules/jquery.loadmask.js"
     "bootstrap/js/bootstrap.min.js"

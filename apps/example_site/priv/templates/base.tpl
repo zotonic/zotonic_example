@@ -38,6 +38,7 @@
     {% lib
           "css/bootstrap.css"
           "css/logon.css"
+          "css/survey.css"
           minify
     %}
 

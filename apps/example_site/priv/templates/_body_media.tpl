@@ -1,4 +1,5 @@
 {% with size|default:'large' as size %}
+{% with mediaclass|default:("body-media-" ++ size) as mediaclass %}
 {% if id.medium as medium %}
     {% if size == 'small' %}
         <label for="{{ #img }}" class="margin-toggle">⊕</label>
@@ -49,4 +50,5 @@
         </figure>
     {% endif %}
 {% endif %}
+{% endwith %}
 {% endwith %}

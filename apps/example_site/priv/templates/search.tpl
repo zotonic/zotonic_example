@@ -12,7 +12,7 @@
 
         <form class="search-form" action="{% url search %}" method="GET">
             <p class="label-floating">
-                <input placeholder="{_ Text to search _}" name="qs" class="form-control" name="qs" autofocus value="{{ q.qs|escape }}">
+                <input autocomplete="off" placeholder="{_ Text to search _}" name="qs" class="form-control" name="qs" autofocus value="{{ q.qs|escape }}">
             </p>
         </form>
     </article>

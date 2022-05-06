@@ -4,5 +4,6 @@
     {home,      [],                     controller_page,    [ {template, "home.tpl"}, {id, page_home} ]},
     {page,      [ "page", id, slug ],   controller_page,    [ {template, {cat, "page.tpl"}} ]},
     {page,      [ "page", id ],         controller_page,    [ {template, {cat, "page.tpl"}} ]},
-    {search,    [ "search" ],           controller_template,[ {template, "search.tpl"}]}
+    {search,    [ "search" ],           controller_template,[ {template, "search.tpl"}]},
+    {search,    [ "search-view" ],      controller_template,[ {template, "search_view.tpl"}]}
 ].

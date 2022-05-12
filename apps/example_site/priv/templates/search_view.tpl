@@ -10,8 +10,8 @@
                         }
                         as result %}
                             {% for id in result %}
-                                <li class="search-view-list-items">
-                                    {% catinclude "_search_view_list_item.tpl" id is_show_cat %}
+                                <li class="search-view-list-item">
+                                    {% catinclude "_search_view_list_item.tpl" id %}
                                 </li>
                             {% endfor %}
                 {% endwith %}

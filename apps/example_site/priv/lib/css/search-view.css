@@ -1,0 +1,19 @@
+/*@TODO: Move to SASS*/
+
+.search-view-results .active {background: #ccc;}
+
+.search-view-results .title {max-width: 100%;}
+
+.search-view-results img {position: absolute; left: -100px; top: -25px;}
+
+.search-view-results .list-item {margin: 0; position: relative;}
+
+.search-view-results li {padding: 25px 12px; margin: 0; background: #fff;}
+
+.search-view-results {width: 55%; position:absolute; z-index: 5; padding-right: 2rem;}
+
+.search-view-results li.search-view-list-item a {color: #1683b1;}
+
+.search-view-results li.search-view-list-item a:hover {color: #1ca5de;}
+
+.search-view-results li:hover {cursor: pointer;}

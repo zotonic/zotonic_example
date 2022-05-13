@@ -23,6 +23,7 @@
             "css/logon.css"
             "css/jquery.loadmask.css"
             "css/zotonic-admin.css"
+            "css/admin-search-view.css"
             minify
         %}
 

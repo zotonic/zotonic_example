@@ -10,13 +10,13 @@ jQuery( document ).ready(function() {
             type: 'GET',
             url: surl + this.value
       	}).done(function( data ) {
-            $form.next().remove();
-            $form.after( data );
+            jQuery( input ).next().remove();
+            jQuery( input ).after( data );
 
             $result = jQuery( '.search-view-results li' );
 
             $result.on('click', function() {
-                $form.next().remove();
+                jQuery( input ).next().remove();
                 input.value = jQuery( this ).find( 'span' ).text();
                 $form.submit();
             });
@@ -57,6 +57,6 @@ jQuery( document ).ready(function() {
     });
 
     jQuery( 'body' ).on('click', function() {
-         if ($form && $form.length) $form.next().remove();
+         if ($form && $form.length) jQuery( input ).next().remove();
     });
 });

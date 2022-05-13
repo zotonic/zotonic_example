@@ -35,6 +35,8 @@
     "js/modules/jquery.loadmask.js"
     "js/modules/jquery.timepicker.min.js"
 
+    "js/search-view.js"
+
     minify
 %}
 

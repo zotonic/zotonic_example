@@ -39,6 +39,7 @@
           "css/bootstrap.css"
           "css/logon.css"
           "css/survey.css"
+          "css/zotonic-search-view.css"
           minify
     %}
 

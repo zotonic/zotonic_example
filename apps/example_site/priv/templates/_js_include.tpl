@@ -17,6 +17,7 @@
     "js/modules/livevalidation-1.3.js"
     "js/modules/jquery.loadmask.js"
     "bootstrap/js/bootstrap.min.js"
+    "js/zotonic-search-view.js"
 
     minify
 %}

@@ -11,10 +11,10 @@
 
 <div class="page-relations">
     {% with m.search.query::%{
-            query_id=id
-            qargs=true
-            pagelen=40
-            page=q.page
+            query_id: id,
+            qargs: true,
+            pagelen: 40,
+            page: q.page
         } as result
     %}
         <div class="connections paged" id="content-pager">

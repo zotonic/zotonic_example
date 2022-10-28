@@ -29,11 +29,11 @@
         <h3>{_ Latest websites _}</h3>
         <div class="list-items">
             {% for id in m.search.query::%{
-                    cat=id.category_id,
-                    is_published=true,
-                    sort="-created",
-                    id_exclude=id,
-                    pagelen=5
+                    cat: id.category_id,
+                    is_published: true,
+                    sort: "-created",
+                    id_exclude: id,
+                    pagelen: 5
                 }
             %}
                 {% catinclude "_list_item.tpl" id %}

@@ -49,10 +49,10 @@
     {% endif %}
 
     {% with m.search.query::%{
-            cat=id,
-            sort="-created",
-            pagelen=20,
-            page=q.page
+            cat: id,
+            sort: "-created",
+            pagelen: 20,
+            page: q.page
         } as result
     %}
         <div class="connections paged" id="content-pager">

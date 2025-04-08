@@ -6,8 +6,12 @@
   It defines the basic layout, and includes the common css and javascript.
 -->
 
-<!-- The current language is available in the variable 'z_language' -->
-<html xml:lang="{{ z_language }}">
+<!--
+  The current language is available in the variable 'z_language'.
+  The block 'html_attr' allows to add extra attributes to the html tag and is used
+  by the logon templates to pass the continuation URL.
+-->
+<html xml:lang="{{ z_language }}" lang="{{ z_language }}" class="environment-{{ m.site.environment }}" {% block html_attr %}{% endblock %}>
 
   <head>
     <meta charset="utf-8">
